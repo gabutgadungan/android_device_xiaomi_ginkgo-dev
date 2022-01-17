@@ -234,7 +234,8 @@ PRODUCT_COPY_FILES += \
 
 # LMKD
 PRODUCT_SYSTEM_PROPERTIES += \
-    ro.lmk.filecache_min_kb=153600
+    ro.lmk.filecache_min_kb=153600 \
+    ro.lmk.kill_timeout_ms=50
 
 # Lights
 PRODUCT_PACKAGES += \
