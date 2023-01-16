@@ -16,10 +16,6 @@ on early-init
     write /sys/block/mmcblk0/queue/nr_requests 256
     write /sys/block/mmcblk0/queue/iostats 0
 
-on init
-    # Enable suspend to RAM
-    write /sys/power/mem_sleep "deep"
-
 on post-fs
     # Start services for bootanim
     start surfaceflinger
@@ -149,6 +145,9 @@ on property:vendor.post_boot.parsed=1
 
     # Enable PowerHAL hint processing
     setprop vendor.powerhal.init 1
+
+    # Enable suspend to RAM
+    write /sys/power/mem_sleep "deep"
 
 on charger
     chown system system /sys/class/leds/red/brightness
