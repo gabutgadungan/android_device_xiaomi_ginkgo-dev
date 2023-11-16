@@ -364,7 +364,6 @@ PRODUCT_PACKAGES += \
 # RIL
 PRODUCT_PACKAGES += \
     libjson \
-    libprotobuf-cpp-full \
     librmnetctl
 
 PRODUCT_PACKAGES += \
